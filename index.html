@@ -6,15 +6,14 @@
     <title>فريق أثر كيميائي التطوعي</title>
     <style>
         body { font-family: 'Tahoma', sans-serif; background: #f0f4f8; padding: 20px; color: #333; line-height: 1.8; }
-        .container { background: white; max-width: 700px; margin: auto; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; overflow: hidden; }
+        .container { background: white; max-width: 700px; margin: auto; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: relative; }
         
-        /* واجهة الترحيب */
+        /* تنسيق الشعار */
+        .logo-container { text-align: center; margin-bottom: 20px; }
+        .team-logo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #2c7a7b; padding: 5px; background: #fff; }
+
         #welcome-screen { text-align: center; }
-        .logo-container { margin-bottom: 20px; }
-        .logo-container img { max-width: 150px; height: auto; } /* هنا سيوضع اللوغو لاحقاً */
-        .header-symbol { font-size: 50px; color: #2c7a7b; }
-        
-        h1 { color: #2c7a7b; margin-top: 10px; font-size: 24px; border-bottom: 2px solid #e6fffa; display: inline-block; padding-bottom: 5px; }
+        h1 { color: #2c7a7b; margin-top: 10px; font-size: 24px; }
         .motto { font-style: italic; color: #4a5568; font-size: 14px; margin-bottom: 25px; display: block; }
         
         .intro-text { text-align: justify; background: #fff; padding: 15px; border-radius: 10px; font-size: 15px; margin-bottom: 20px; border: 1px dashed #cbd5e0; }
@@ -22,27 +21,22 @@
 
         .section-title { background: #2c7a7b; color: white; padding: 8px 20px; border-radius: 50px; display: inline-block; margin-bottom: 15px; font-size: 16px; }
         .info-card { background: #f7fafc; padding: 20px; border-radius: 12px; text-align: right; margin-bottom: 20px; border-right: 6px solid #2c7a7b; }
-        .info-card ul { padding-right: 20px; margin: 0; }
-        .info-card li { margin-bottom: 8px; }
-
-        .call-to-action { background: #fff5f5; border: 1px solid #feb2b2; padding: 15px; border-radius: 10px; color: #c53030; font-weight: bold; margin-top: 25px; }
-
+        
         /* الاستمارة */
         #form-screen { display: none; }
-        h2 { color: #2c7a7b; border-bottom: 2px solid #2c7a7b; padding-bottom: 10px; }
+        h2 { color: #2c7a7b; border-bottom: 2px solid #2c7a7b; padding-bottom: 10px; text-align: center; }
         h3 { background: #e6fffa; padding: 10px; border-right: 5px solid #2c7a7b; font-size: 16px; margin-top: 25px; border-radius: 0 5px 5px 0; }
         
         .field { margin-bottom: 15px; text-align: right; }
         label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px; }
         input, select, textarea { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; box-sizing: border-box; font-family: inherit; }
-        input:focus { border-color: #2c7a7b; outline: none; box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1); }
         
         .checkbox-group { display: block; margin-top: 10px; text-align: right; font-size: 14px; }
         .checkbox-group input { width: auto; margin-left: 10px; }
         
         button { width: 100%; padding: 16px; background: #2c7a7b; color: white; border: none; border-radius: 12px; font-size: 17px; cursor: pointer; font-weight: bold; margin-top: 20px; transition: 0.3s; }
-        button:hover { background: #1e5a5c; box-shadow: 0 4px 12px rgba(44, 122, 123, 0.2); }
-        .btn-secondary { background: #a0aec0; margin-top: 10px; font-size: 14px; padding: 10px; }
+        button:hover { background: #1e5a5c; transform: translateY(-2px); }
+        .btn-secondary { background: #a0aec0; margin-top: 10px; }
 
         footer { text-align: center; margin-top: 30px; font-size: 12px; color: #718096; border-top: 1px solid #e2e8f0; padding-top: 15px; }
     </style>
@@ -53,49 +47,42 @@
     
     <div id="welcome-screen">
         <div class="logo-container">
-            <div class="header-symbol">🌱</div> 
+            <img src="https://i.ibb.co/N2K3y9hP/Picsart-26-01-30-21-08-01-996.png" alt="شعار أثر كيميائي" class="team-logo">
             <h1>فريق أثر كيميائي التطوعي</h1>
             <span class="motto">"الأثر لا يُقاس بالكلمات بل بالأفعال"</span>
         </div>
         
         <div class="intro-text">
-            يسرّنا ويشرّفنا أن نخطو مع حضراتكم خطوةً نحو صناعة أثر حقيقي، من خلال تأسيس فريق تطوعي يؤمن بأن خدمة المجتمع ليست خيارًا مؤجلًا، بل واجبًا حاضرًا.
+            إيمانًا بأن العطاء مسؤولية، وبأن المبادرة تصنع الفرق، نفتح باب الانضمام لصناعة أثر حقيقي في محافظتنا العزيزة ديالى.
             <span class="quran-v">﴿وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ﴾</span>
-            بادر قبل أن تغادر… فالأثر لا ينتظر المترددين، والتاريخ لا يذكر إلا أصحاب المبادرات.
         </div>
 
         <div class="section-title">رسالة الفريق</div>
         <div class="info-card">
-            إحداث أثر مجتمعي فاعل من خلال ترسيخ ثقافة العمل التطوعي، وتحفيز الأفراد على المبادرة والعطاء، وتنمية القدرات والمهارات، وبناء جيل واعٍ يؤمن بالمسؤولية، ويعمل بروح الفريق الواحد.
+            إحداث أثر مجتمعي فاعل من خلال ترسيخ ثقافة العمل التطوعي، وتحفيز الأفراد على العطاء، وتنمية المهارات لبناء جيل واعٍ يؤمن بالمسؤولية.
         </div>
 
-        <div class="section-title">أهدافنا</div>
+        <div class="section-title">أهدافنا الاستراتيجية</div>
         <div class="info-card">
-            <ul>
-                <li>إشاعة روح المبادرة والعمل التطوعي في المجتمع.</li>
-                <li>تمكين الطاقات الشابة وتوجيهها نحو خدمة المجتمع.</li>
-                <li>تنفيذ برامج تطوعية وتطويرية ذات قيمة حقيقية وأثر ملموس.</li>
-                <li>تعزيز العمل بروح الفريق الواحد واليد الواحدة.</li>
-                <li>توثيق النشاط التطوعي للحصول على نقاط (نظام تجميع النقاط) المعتمد لدى مجلس الخدمة الاتحادي.</li>
+            <ul style="padding-right: 20px;">
+                <li>تمكين الطاقات الشابة وتوجيهها لخدمة المجتمع.</li>
+                <li>تنفيذ برامج تطوعية وتطويرية ذات قيمة حقيقية.</li>
+                <li>توثيق النشاط التطوعي للحصول على نقاط المفاضلة في التعيينات الرسمية.</li>
+                <li>تعزيز روح العمل الجماعي كمنهج حياة.</li>
             </ul>
         </div>
 
-        <div class="call-to-action">
-            تنبيه: بالدخول للتسجيل، أنت تتعهد بتقديم معلومات صحيحة وتلتزم بالجدية والمسؤولية.
-        </div>
-
-        <button onclick="showForm()">الدخول إلى استمارة التسجيل</button>
+        <button onclick="showForm()">موافق، الدخول للاستمارة</button>
     </div>
 
     <div id="form-screen">
-        <h2>استمارة الانضمام</h2>
-        <p style="font-size: 13px; color: #666;">يرجى ملء كافة الحقول المطلوبة بدقة لنتمكن من مراجعة طلبك.</p>
+        <h2>استمارة تسجيل المتطوعين</h2>
 
         <form id="volunteerForm">
             <h3>1️⃣ البيانات الشخصية</h3>
             <div class="field">
                 <label>الاسم الثلاثي *</label>
-                <input type="text" name="fullName" placeholder="اكتب اسمك كما في الهوية" required>
+                <input type="text" name="fullName" required>
             </div>
             <div class="field">
                 <label>الجنس *</label>
@@ -106,35 +93,61 @@
                 </select>
             </div>
             <div class="field">
-                <label>المحافظة / القضاء *</label>
-                <input type="text" name="location" placeholder="مثال: ديالى - بعقوبة" required>
+                <label>تاريخ الولادة *</label>
+                <input type="date" name="dob" required>
             </div>
             <div class="field">
-                <label>رقم الواتساب *</label>
-                <input type="tel" name="phone" placeholder="07xxxxxxxx" required>
+                <label>المحافظة / القضاء *</label>
+                <input type="text" name="location" placeholder="ديالى - بعقوبة" required>
+            </div>
+            <div class="field">
+                <label>رقم الهاتف (واتساب فعّال) *</label>
+                <input type="tel" name="phone" required>
             </div>
 
-            <h3>2️⃣ المسار المهني والدافع</h3>
+            <h3>2️⃣ المعلومات الدراسية والمهنية</h3>
             <div class="field">
-                <label>الحالة الدراسية/المهنية *</label>
+                <label>الحالة الدراسية *</label>
                 <select name="eduStatus" required>
                     <option value="طالب">طالب</option>
                     <option value="خريج">خريج</option>
                     <option value="موظف">موظف</option>
-                    <option value="كاسب">كاسب</option>
+                    <option value="عاطل عن العمل">عاطل عن العمل</option>
                 </select>
             </div>
             <div class="field">
-                <label>لماذا ترغب بالانضمام لفريق أثر كيميائي؟ *</label>
-                <textarea name="motivation" rows="3" required placeholder="تحدث بإيجاز عن شغفك بالعطاء"></textarea>
+                <label>التخصص / القسم</label>
+                <input type="text" name="major">
             </div>
 
+            <h3>3️⃣ الخبرة والاهتمامات</h3>
+            <div class="field">
+                <label>هل لديك خبرة سابقة في التطوع؟</label>
+                <select name="hasExperience">
+                    <option value="لا">لا</option>
+                    <option value="نعم">نعم</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>المجالات التي تفضلها:</label>
+                <div class="checkbox-group"><input type="checkbox" name="interests" value="إنسانية"> حملات إنسانية</div>
+                <div class="checkbox-group"><input type="checkbox" name="interests" value="تعليمية"> أنشطة تعليمية</div>
+                <div class="checkbox-group"><input type="checkbox" name="interests" value="توعوية"> حملات توعوية</div>
+            </div>
+
+            <h3>4️⃣ الدافع الشخصي</h3>
+            <div class="field">
+                <label>لماذا ترغب بالانضمام إلى أثر كيميائي؟ *</label>
+                <textarea name="motivation" rows="3" required></textarea>
+            </div>
+
+            <h3>5️⃣ التعهد</h3>
             <div class="checkbox-group">
-                <label><input type="checkbox" required> أتعهد بأن المعلومات صحيحة وألتزم بروح الفريق الواحد. *</label>
+                <label><input type="checkbox" required> أتعهد بأن جميع المعلومات صحيحة وألتزم بروح الفريق الواحد. *</label>
             </div>
 
             <button type="submit" id="btnSubmit">إرسال البيانات الآن</button>
-            <button type="button" class="btn-secondary" onclick="showWelcome()">العودة لصفحة الأهداف</button>
+            <button type="button" class="btn-secondary" onclick="showWelcome()">رجوع لصفحة الأهداف</button>
         </form>
     </div>
 
@@ -144,39 +157,39 @@
 </div>
 
 <script>
-    const welcomeScreen = document.getElementById('welcome-screen');
-    const formScreen = document.getElementById('form-screen');
-    const form = document.getElementById('volunteerForm');
-    const btn = document.getElementById('btnSubmit');
-
     function showForm() {
-        welcomeScreen.style.display = 'none';
-        formScreen.style.display = 'block';
+        document.getElementById('welcome-screen').style.display = 'none';
+        document.getElementById('form-screen').style.display = 'block';
         window.scrollTo(0, 0);
     }
 
     function showWelcome() {
-        formScreen.style.display = 'none';
-        welcomeScreen.style.display = 'block';
+        document.getElementById('form-screen').style.display = 'none';
+        document.getElementById('welcome-screen').style.display = 'block';
         window.scrollTo(0, 0);
     }
 
-    form.onsubmit = async (e) => {
+    document.getElementById('volunteerForm').onsubmit = async (e) => {
         e.preventDefault();
+        const btn = document.getElementById('btnSubmit');
         btn.disabled = true;
         btn.innerText = "جاري الإرسال...";
 
         const scriptURL = "https://script.google.com/macros/s/AKfycbzjdEX4Y6wnl9sHb5tnxz7lTdlMf9cyjVJl_7I9C-01YdR6eIjEypjqOYZ3ptmf3-2r3Q/exec";
 
         try {
-            const formData = new FormData(form);
+            const formData = new FormData(e.target);
+            // تجميع الاهتمامات
+            const interests = [];
+            document.querySelectorAll('input[name="interests"]:checked').forEach(cb => interests.push(cb.value));
+            formData.set('interests', interests.join(' - '));
+
             await fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors'});
-            
-            alert("تم إرسال طلبك بنجاح! 🌱\nشكراً لإنضمامك لعائلة أثر كيميائي، سنتواصل معك قريباً.");
-            form.reset();
+            alert("تم التسجيل بنجاح في فريق أثر كيميائي! 🌱");
+            e.target.reset();
             showWelcome();
         } catch (error) {
-            alert("حدث خطأ، يرجى التأكد من اتصال الإنترنت.");
+            alert("حدث خطأ في الاتصال.");
         } finally {
             btn.disabled = false;
             btn.innerText = "إرسال البيانات الآن";
@@ -186,4 +199,3 @@
 
 </body>
 </html>
-
