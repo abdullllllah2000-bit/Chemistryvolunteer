@@ -7,10 +7,10 @@
     <style>
         body { font-family: 'Tahoma', sans-serif; background: #f4f7f9; padding: 0; margin: 0; color: #333; line-height: 1.8; }
         
-        /* تصميم الهيدر (البانر) */
+        /* تصميم البانر العلوي */
         .header-banner {
             background: linear-gradient(135deg, #2c7a7b 0%, #1e5a5c 100%);
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             color: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -18,62 +18,70 @@
 
         .logo-wrapper {
             background: white;
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 5px solid rgba(255,255,255,0.3);
+            border: 6px solid rgba(255,255,255,0.3);
             overflow: hidden;
         }
 
         .team-logo {
-            width: 115px; 
-            height: 115px;
+            width: 120px; 
+            height: 120px;
             object-fit: contain; 
             display: block;
         }
 
-        /* تعديل الحاوية لتبدأ بعد البانر مباشرة بدون تداخل */
         .container { 
             background: white; 
-            max-width: 750px; 
-            margin: 20px auto 40px; /* مسافة بسيطة تحت البانر لراحة العين */
+            max-width: 800px; 
+            margin: 25px auto 50px; 
             padding: 40px; 
             border-radius: 20px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
         }
 
-        h1 { margin: 0; font-size: 28px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
-        .motto-header { opacity: 0.9; font-size: 14px; margin-top: 10px; display: block; font-weight: bold; }
+        h1 { margin: 0; font-size: 32px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        
+        /* تضخيم جملة العطاء لتكون تايتل عريض */
+        .motto-header { 
+            display: block;
+            font-size: 20px; /* تكبير الخط */
+            font-weight: 900; /* تضخيم الخط */
+            margin-top: 15px; 
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
 
-        .full-text { text-align: justify; font-size: 15px; }
-        .quran-text { color: #2c7a7b; font-weight: bold; text-align: center; display: block; margin: 20px 0; font-size: 18px; }
-        .hadith-text { color: #2c4a7b; font-weight: bold; text-align: center; display: block; margin: 10px 0; }
+        .full-text { text-align: justify; font-size: 16px; }
+        .quran-text { color: #2c7a7b; font-weight: bold; text-align: center; display: block; margin: 25px 0; font-size: 20px; }
+        .hadith-text { color: #2c4a7b; font-weight: bold; text-align: center; display: block; margin: 10px 0; font-size: 17px; }
 
-        .section-header { background: #e6fffa; padding: 10px 15px; border-right: 6px solid #2c7a7b; font-weight: bold; color: #2c7a7b; margin: 30px 0 15px 0; }
+        .section-header { background: #e6fffa; padding: 12px 20px; border-right: 6px solid #2c7a7b; font-weight: bold; color: #2c7a7b; margin: 35px 0 15px 0; font-size: 18px; }
         .info-block { margin-bottom: 20px; }
         .info-block ul { padding-right: 25px; margin: 0; }
         .info-block li { margin-bottom: 12px; }
 
-        .cta-box { background: #fff5f5; border: 1px solid #feb2b2; padding: 25px; border-radius: 12px; text-align: center; color: #c53030; font-weight: bold; margin: 40px 0; }
+        .cta-box { background: #fff5f5; border: 1px solid #feb2b2; padding: 25px; border-radius: 15px; text-align: center; color: #c53030; font-weight: bold; margin: 45px 0; font-size: 17px; }
 
         #form-screen { display: none; }
         h2 { color: #2c7a7b; border-bottom: 2px solid #2c7a7b; padding-bottom: 15px; text-align: center; }
-        h3 { background: #edf2f7; padding: 12px; border-right: 5px solid #2c7a7b; font-size: 16px; margin-top: 35px; border-radius: 0 8px 8px 0; }
+        h3 { background: #edf2f7; padding: 12px; border-right: 5px solid #2c7a7b; font-size: 16px; margin-top: 35px; }
 
         .field { margin-bottom: 20px; text-align: right; }
-        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; color: #4a5568; }
-        input, select, textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e0; border-radius: 12px; box-sizing: border-box; font-family: inherit; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        input, select, textarea { width: 100%; padding: 14px; border: 1px solid #cbd5e0; border-radius: 12px; font-family: inherit; }
         
-        .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-top: 15px; text-align: right; font-size: 14px; }
-        .checkbox-group input { width: auto; margin-top: 5px; }
-
-        .btn-main { width: 100%; padding: 18px; background: #2c7a7b; color: white; border: none; border-radius: 15px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 25px; transition: 0.3s; }
+        .btn-main { width: 100%; padding: 20px; background: #2c7a7b; color: white; border: none; border-radius: 15px; font-size: 19px; cursor: pointer; font-weight: bold; margin-top: 25px; box-shadow: 0 4px 12px rgba(44,122,123,0.3); }
         .btn-main:hover { background: #1e5a5c; }
-        .btn-back { width: 100%; padding: 12px; background: #edeff2; color: #4a5568; border: none; border-radius: 12px; font-size: 14px; cursor: pointer; margin-top: 15px; font-weight: bold; }
+        .btn-back { width: 100%; padding: 12px; background: #edeff2; color: #4a5568; border: none; border-radius: 12px; cursor: pointer; margin-top: 15px; font-weight: bold; }
 
         footer { text-align: center; padding: 40px 0; font-size: 13px; color: #718096; }
     </style>
@@ -129,7 +137,7 @@
                 بادر قبل أن تغادر… فالأثر لا ينتظر المترددين، والتاريخ لا يذكر إلا أصحاب المبادرات. فالأوطان تُبنى بسواعد المبادرين، لا بأمنيات المتفرجين.
             </div>
 
-            <p style="text-align: center; font-weight: bold;">وتفضّلوا بقبول فائق الاحترام والتقدير</p>
+            <p style="text-align: center; font-weight: bold; font-size: 18px;">وتفضّلوا بقبول فائق الاحترام والتقدير</p>
 
             <button class="btn-main" onclick="showForm()">الانتقال لاستمارة التسجيل</button>
         </div>
@@ -138,10 +146,7 @@
             <h2>استمارة تسجيل المتطوعين</h2>
             <form id="volunteerForm">
                 <h3>1️⃣ البيانات الشخصية</h3>
-                <div class="field">
-                    <label>الاسم الثلاثي *</label>
-                    <input type="text" name="fullName" required>
-                </div>
+                <div class="field"><label>الاسم الثلاثي *</label><input type="text" name="fullName" required></div>
                 <div class="field">
                     <label>الجنس *</label>
                     <select name="gender" required>
@@ -150,20 +155,11 @@
                         <option value="أنثى">أنثى</option>
                     </select>
                 </div>
-                <div class="field">
-                    <label>تاريخ الولادة *</label>
-                    <input type="date" name="dob" required>
-                </div>
-                <div class="field">
-                    <label>المحافظة / القضاء *</label>
-                    <input type="text" name="location" placeholder="ديالى - بعقوبة" required>
-                </div>
-                <div class="field">
-                    <label>رقم الهاتف (واتساب فعّال) *</label>
-                    <input type="tel" name="phone" required>
-                </div>
+                <div class="field"><label>تاريخ الولادة *</label><input type="date" name="dob" required></div>
+                <div class="field"><label>المحافظة / القضاء *</label><input type="text" name="location" placeholder="ديالى - بعقوبة" required></div>
+                <div class="field"><label>رقم الهاتف (واتساب) *</label><input type="tel" name="phone" required></div>
 
-                <h3>2️⃣ المعلومات الدراسية والمهنية</h3>
+                <h3>2️⃣ المعلومات الدراسية</h3>
                 <div class="field">
                     <label>الحالة الدراسية *</label>
                     <select name="eduStatus" required>
@@ -173,36 +169,23 @@
                         <option value="كاسب">كاسب</option>
                     </select>
                 </div>
+                <div class="field"><label>التخصص / القسم</label><input type="text" name="major"></div>
+
+                <h3>3️⃣ الاهتمامات</h3>
                 <div class="field">
-                    <label>التخصص / القسم</label>
-                    <input type="text" name="major">
+                    <label>المجالات المفضلة:</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <span><input type="checkbox" name="interests" value="إنسانية"> إنسانية</span>
+                        <span><input type="checkbox" name="interests" value="تعليمية"> تعليمية</span>
+                        <span><input type="checkbox" name="interests" value="توعوية"> توعوية</span>
+                        <span><input type="checkbox" name="interests" value="تنظيم"> تنظيم</span>
+                    </div>
                 </div>
 
-                <h3>3️⃣ الخبرة والاهتمامات التطوعية</h3>
+                <h3>4️⃣ الدافع</h3>
                 <div class="field">
-                    <label>هل سبق لك المشاركة في أعمال تطوعية؟</label>
-                    <select name="hasExperience">
-                        <option value="لا">لا</option>
-                        <option value="نعم">نعم</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label>المجالات التي تفضل العمل بها:</label>
-                    <div class="checkbox-group"><input type="checkbox" name="interests" value="إنسانية"> حملات إنسانية وإغاثية</div>
-                    <div class="checkbox-group"><input type="checkbox" name="interests" value="تعليمية"> أنشطة تعليمية وتدريبية</div>
-                    <div class="checkbox-group"><input type="checkbox" name="interests" value="توعوية"> حملات توعوية</div>
-                    <div class="checkbox-group"><input type="checkbox" name="interests" value="تنظيم"> تنظيم فعاليات ومؤتمرات</div>
-                </div>
-
-                <h3>4️⃣ الدافع الشخصي</h3>
-                <div class="field">
-                    <label>لماذا ترغب بالانضمام إلى فريق أثر كيميائي؟ *</label>
+                    <label>لماذا ترغب بالانضمام؟ *</label>
                     <textarea name="motivation" rows="4" required placeholder="اكتب دافعك هنا..."></textarea>
-                </div>
-
-                <h3>5️⃣ التعهد</h3>
-                <div class="checkbox-group">
-                    <label><input type="checkbox" required> أتعهد بأن المعلومات المقدّمة صحيحة، وألتزم بقيم العمل التطوعي وروح الفريق الواحد. *</label>
                 </div>
 
                 <button type="submit" class="btn-main" id="btnSubmit">إرسال البيانات الآن</button>
@@ -231,17 +214,12 @@
         const btn = document.getElementById('btnSubmit');
         btn.disabled = true;
         btn.innerText = "جاري الإرسال...";
-
         const scriptURL = "https://script.google.com/macros/s/AKfycbzjdEX4Y6wnl9sHb5tnxz7lTdlMf9cyjVJl_7I9C-01YdR6eIjEypjqOYZ3ptmf3-2r3Q/exec";
 
         try {
             const formData = new FormData(e.target);
-            const interests = [];
-            document.querySelectorAll('input[name="interests"]:checked').forEach(cb => interests.push(cb.value));
-            formData.set('interests', interests.join(' - '));
-
             await fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors'});
-            alert("تم إرسال طلبك بنجاح! 🌱\nشكراً لإنضمامك لعائلة أثر كيميائي.");
+            alert("تم إرسال طلبك بنجاح! 🌱");
             e.target.reset();
             showWelcome();
         } catch (error) {
