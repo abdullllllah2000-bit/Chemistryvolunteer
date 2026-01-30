@@ -150,7 +150,7 @@
                 
                 <h3>1️⃣ البيانات الأساسية</h3>
                 <div class="field"><label>الاسم الثلاثي واللقب *</label><input type="text" name="fullName" required></div>
-                <div class="field"><label>البريد الإلكتروني (Email) *</label><input type="email" name="email" unrequired></div>
+                <div class="field"><label>البريد الإلكتروني (Email)</label><input type="email" name="email"></div>
                 <div class="field">
                     <label>الجنس *</label>
                     <select name="gender" required>
@@ -173,7 +173,17 @@
                     </select>
                 </div>
                 <div class="field"><label>الكلية / القسم / التخصص *</label><input type="text" name="major" required></div>
-                <div class="field"><label>العمل الحالي / المهنة *</label><input type="text" name="job" required></div>
+                <div class="field">
+                    <label>العمل الحالي / المهنة *</label>
+                    <select name="job" required>
+                        <option value="">اختر</option>
+                        <option value="موظف حكومي">موظف حكومي</option>
+                        <option value="قطاع خاص">قطاع خاص</option>
+                        <option value="عمل حر">عمل حر</option>
+                        <option value="طالب">طالب</option>
+                        <option value="خريج">خريج يبحث عن عمل</option>
+                    </select>
+                </div>
                 <div class="field"><label>المهارات التي تتقنها (تصميم، مونتاج، كتابة، إلخ)</label><textarea name="skills" rows="2"></textarea></div>
 
                 <h3>3️⃣ الخبرة والاهتمامات التطوعية</h3>
@@ -241,7 +251,6 @@
         window.scrollTo(0, 0);
     }
 
-    // دالة إظهار/إخفاء تفاصيل الخبرة
     function toggleExperienceDetails() {
         const val = document.getElementById('prevExp').value;
         const detailsDiv = document.getElementById('experience-details-div');
@@ -264,7 +273,7 @@
             await fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors'});
             alert("تم إرسال بياناتك بنجاح! 🌱");
             e.target.reset();
-            toggleExperienceDetails(); // لإخفاء الخانة بعد الريسيت
+            toggleExperienceDetails();
             showWelcome();
         } catch (error) {
             alert("حدث خطأ في الاتصال.");
@@ -276,4 +285,3 @@
 </script>
 </body>
 </html>
-
