@@ -46,6 +46,26 @@
 
         footer { text-align: center; padding: 40px 0; font-size: 13px; color: #718096; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-color-scheme: dark) {
+    body { background: #1a202c; color: #e2e8f0; }
+    .container { background: #2d3748; color: white; }
+    label { color: #cbd5e0; }
+    input, select, textarea { background: #4a5568; border-color: #718096; color: white; }
+    .section-header { background: #2c7a7b; color: white; }
+}
+        /* كود دائرة التحميل */
+.loader {
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -239,7 +259,7 @@
         const btn = document.getElementById('btnSubmit');
         const name = document.getElementById('userName').value;
         btn.disabled = true;
-        btn.innerText = "جاري حفظ بياناتك...";
+        btn.innerHTML = '<span class="loader"></span> جاري تأمين وحفظ بياناتك...';
         
         const scriptURL = "https://script.google.com/macros/s/AKfycbymjxffDKViFGXTjm7AK9lksRt65hOwL7_EX-0bd5_mRQmMK7NlgcWBFLDiZDcFyrI55w/exec";
 
@@ -269,3 +289,4 @@
 </script>
 </body>
 </html>
+
